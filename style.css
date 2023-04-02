@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+nav ul{
+    list-style: none;
+    background-color: rgb(140, 124, 157);
+    text-align: center;
+   
+}
+.card{
+    display: inline-block;
+    padding:10px ;
+}
+
+h1{
+    text-align: center;
+    margin: 15px 25px;
+}
+
+    
+
+nav ul li{
+    display: inline-block; 
+    margin:opx 10px;
+    padding:10px 10px;
+    
+  
+}
+nav ul li a{
+    text-decoration: none;
+    font-family: cursive;
+    color: aliceblue;
+    padding: 10px 15px;
+    display: block;
+    
+    position:relative;
+    z-index: 1;
+}
+
+nav ul li:hover a{
+   
+    background-color: rgb(55, 33, 180);
+    
+}
+nav ul li a::before{
+    content: "";
+    width: 0%;
+    height: 100%;
+background-color: aqua;
+position: absolute;
+    transition: 2s;
+    top: 0;
+    left:0;
+    z-index: -1;
+}
+nav ul li a::after{
+    content: "";
+    width: 0%;
+height: 100%;
+position: absolute;
+z-index: -1;
+transition: 2s;
+background-color: aqua;
+top:0;
+right:0;
+}
+nav ul li:hover a::before{
+    width: 50%;
+}
+
+nav ul li:hover a::after{
+    width: 50%;
+}
+nav ul li ul{
+    
+ position: absolute;
+opacity: o;
+visibility: hidden;
+transition: 2s;
+margin-left: 70px;
+}
+nav ul li:hover ul{
+    opacity: 1;
+    visibility: visible;
+ margin-left:0 ;
+}
+nav ul li ul li{
+    display: block;
+    margin: 0;
+    padding: 0;
+}
